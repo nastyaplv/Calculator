@@ -22,10 +22,8 @@ public class Main {
         }
         return result;
     }
-    public static String calc(){
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("Input:");
-        String s1=scanner.nextLine();
+    public static String calc(String input){
+        String s1=input;
         String [] strings=s1.split(" ");
         if (strings.length!=3) {
             throw new RuntimeException("Выражение неверного формата");
@@ -80,6 +78,11 @@ public class Main {
         return s2;
     }
     public static void main(String[] args) {
-        calc();
+        Scanner scanner = new Scanner(System.in);
+        while(true) {
+            System.out.println("Input:");
+            calc(scanner.nextLine());
+        }
+
     }
     }
